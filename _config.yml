@@ -19,7 +19,7 @@ navigations:
     href: /tags.html
   # - title: Books
   #   class: fa fa-book
-    href: /about.html
+    # href: /about.html
   - title: About
     class: fa fa-user
     href: /about.html
