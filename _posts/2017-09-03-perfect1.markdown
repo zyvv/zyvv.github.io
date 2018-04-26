@@ -1,0 +1,173 @@
+---
+title: 'Perfect的简单使用'
+layout: post
+tags: 
+- Swift
+- Perfect
+---
+
+
+原教程地址：[Server Side Swift with Perfect: Getting Started](https://videos.raywenderlich.com/courses/77-server-side-swift-with-perfect/lessons/1)
+
+Perfect是一个开源的服务器端Swift框架，既可以用于前端开发又可以用于后端开发。Perfect具有完整的服务器端所需的功能，比如处理HTTPRequest请求、编解码JSON数据、Mustache模板解析等。
+
+使用Perfect，需要先安装Swift3。在Mac上，你只需要下载并安装Xcode8就可以完成全部配置。
+
+如果你使用的是Linux，需要安装 Swfit3工具链。具体步骤可以去[swift.org](https://swift.org/)查看，同时你还需要安装一些Perfect依赖库，[perfect.org](http://perfect.org/)有具体信息。
+
+配置完之后，先创建一个`hello-perfect`的文件夹。
+```
+mkdir hello-perfect
+cd hello-perfect
+```
+然后用Swift Package Manager(SPM)初始化包，并生成一个`Xcode Project`。
+```
+swift package init --type executable
+swift package generate-xcodeproj
+```
+用Xcode打开刚创建的工程，并将Target切换至最后一个，编译并运行。
+
+接下来使用SPM创建Perfect应用。
+
+打开`Package.swift`添加以下需要用到的Perfect工具库。
+```swift
+import PackageDescription
+
+let package = Package(
+name: "hello-perfect",
+dependencies: [
+.Package(url: "https://github.com/PerfectlySoft/Perfect-HTTPServer.git", majorVersion: 2)
+]
+)
+```
+切换至终端，执行：
+```
+swift package update
+swift package generate-xcodeproj
+```
+
+这样便下载更新了所需的库，并重新生成了`Xcode Project`。
+
+然后，在`main.swift`中导入以下库，编译。
+```swift
+import PerfectLib
+import PerfectHTTP
+import PerfectHTTPServer
+```
+回到终端，创建目录`webroot`，在目录下新建一个空的文件`hello.txt`，并重新生成`Xcode Project`。
+```
+mkdir webroot
+touch webroot/hello/txt
+swift package generate-xcodeproj
+```
+
+打开`hello.txt`，输入："Hello，web server!"
+
+回到`main.swift`，使用内建的HttpServer类来创建一个新的PerfectHTTPServer。
+```swift
+let server = HTTPServer()
+// 设置端口
+server.serverPort = 8080
+// 设置根目录
+server.documentRoot = "webroot"
+
+do {
+// 尝试启动服务
+try server.start()
+} catch PerfectError.networkError(let err, let msg) {
+// 如果抛出错误，打印错误信息
+print("Network error thrown: \(err) \(msg)")
+}
+
+```
+注意在运行之前，必须先将这个工程的`Working Diectory`设置正确。选中第二个Target，点击`Edit Scheme`，将`Working Diectory`栏设置为工程的根目录。
+![](http://7xpyhz.com1.z0.glb.clouddn.com/working_diectory.jpg)
+
+最后编译并运行。
+
+浏览器输入 
+```
+localhost:8080/hello.txt
+```
+就可以看到`hello.txt`中的内容了。
+
+接下来，创建一个常见的HTTP请求，需要以下三个步骤：
+指定请求方式，比如`GET`或者`POST`；
+指定请求路径，比如`/test`；
+最后处理这个请求。
+
+在`main.swift`中添加如下代码，然后编译运行：
+```swift
+var routes = Routes()
+
+routes.add(method: .get, uri: "/", handler: {
+    request, response in
+    response.setBody(string: "Hello, Perfect!")
+    .completed()  // 记得调用 completed()，否则response不会被发送。
+})
+```
+在浏览器输入`localhost:8080`，会返回”Hello, Perfect!”。
+
+但通常情况下需要返回的是JSON数据。所以，继续在`main.swift`添加一个可以返回JSON数据的route：
+```swift
+func returnJSONMessage(message: String, response: HTTPResponse) {
+    do {
+        try response.setBody(json: ["message": message])
+        .setHeader(.contentType, value: "application/json")
+        .completed()
+    } catch {
+        response.setBody(string: "Error handling request: \(error)")
+        .completed(status: .internalServerError)
+    }
+}
+
+routes.add(method: .get, uri: "/hello", handler: {
+    request, response in
+    returnJSONMessage(message: "Hello, JSON!", response: response)
+})
+```
+编译运行，并在浏览器中发起请求，会返回JSON数据。
+
+如果想在path中传递参数：
+```swift
+routes.add(method: .get, uri: "/beers/{num_beers}", handler: {
+    request, response in
+    guard let numBeersString = request.urlVariables["num_beers"],
+        let numBeersInt = Int(numBeersString) else {
+        response.completed(status: .badRequest)
+        return
+}
+    returnJSONMessage(message: "Take one down, pass it around, \(numBeersInt - 1) bottles of beer on the wall...", response: response)
+})
+```
+编译运行，并在浏览器中输入`localhost:8080/beers/99`，返回：
+```json
+{"message": "Take one down, pass it around, 98 bottles of beer on the wall..."}
+```
+
+最后，创建一个`POST`：
+```swift
+routes.add(method: .post, uri: "post", handler: {
+    request, response in
+    guard let name = request.param(name: "name") else {
+        response.completed(status: .badRequest)
+        return
+    }
+    returnJSONMessage(message: "Hello, \(name)!", response: response)
+})
+
+server.addRoutes(routes)
+```
+使用[Rested](https://itunes.apple.com/cn/app/rested-simple-http-requests/id421879749?mt=12)进行POST请求：
+![](http://7xpyhz.com1.z0.glb.clouddn.com/rested_post.png)
+如图，返回了正确的JSON数据。
+
+这就是Perfect的基本使用介绍，你可以在[这里](https://files.betamax.raywenderlich.com/attachments/videos/661/a8197c96-f551-4b14-a0e0-f7f712a82359.zip)下载Demo源码。
+
+
+
+
+
+
+
+
