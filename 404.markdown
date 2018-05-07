@@ -5,4 +5,4 @@ layout: page
 
 这里什么都没有 :(
 
-你可以到[列表](/index.html)去找找看~
+你可以到[列表](/archive.html)去找找看~
