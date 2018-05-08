@@ -10,12 +10,18 @@ var _hmt = _hmt || [];
 })();
 window.onload = function() {
   var now = new Date();
-  var date1= new Date();
-  date1.setFullYear(2017,5,16);
+  var date1 = new Date();
+  // date1.setFullYear(2017,5,16);
+  date1.setFullYear(2017,7,17);
   var time1 = now.getTime() - date1.getTime();
-  var date2 = Math.floor(time1/(24*3600*1000));
+  var day1 = Math.floor(time1/(24*3600*1000));
 
-  document.getElementById("date3").innerHTML = date2 + " " + (date2-31)
+  var date2 = new Date();
+  date2.setFullYear(2018,5,8);
+  var time2 = now.getTime() - date2.getTime();
+  var day2 = Math.floor(time2/(24*3600*1000));
+
+  document.getElementById("dayText").innerHTML = day1 + " " + day2
 }
 </script>
   <head>
@@ -51,7 +57,7 @@ window.onload = function() {
         <footer>
           <div>
             {% assign first_post = site.posts | last %}
-            &copy; {{ site.time | date: "%Y" }} {{ site.author }} <a href="http://blog.fanfou.com/2012/06/30/proverbs-444/">#喜欢就坦诚相对，不喜欢就以礼相待</a> <span id="date3"></span>
+            &copy; {{ site.time | date: "%Y" }} {{ site.author }} <a href="http://blog.fanfou.com/2012/06/30/proverbs-444/">#喜欢就坦诚相对，不喜欢就以礼相待</a> <span id="dayText"></span>
           </div>
         </footer>
       </div> 
