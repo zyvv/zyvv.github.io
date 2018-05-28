@@ -16,7 +16,6 @@ function setupWebViewJavascriptBridge(callback) {
 
 setupWebViewJavascriptBridge(function(bridge) {
     /* Initialize your app here */
-
 	bridge.callHandler('getBlogNameFromObjC', 
 	                 {'blogURL': 'http://blog.zhangyangwei.com'}, 
 	                 function callback(response) {
