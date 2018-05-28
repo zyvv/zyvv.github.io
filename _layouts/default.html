@@ -1,6 +1,31 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <script>
+
+/*这段代码是固定的，必须要放到js中*/
+function setupWebViewJavascriptBridge(callback) {
+    if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }
+    if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(callback); }
+    window.WVJBCallbacks = [callback];
+    var WVJBIframe = document.createElement('iframe');
+    WVJBIframe.style.display = 'none';
+    WVJBIframe.src = 'wvjbscheme://__BRIDGE_LOADED__';
+    document.documentElement.appendChild(WVJBIframe);
+    setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
+}
+
+setupWebViewJavascriptBridge(function(bridge) {
+    /* Initialize your app here */
+
+	bridge.callHandler('getBlogNameFromObjC', 
+	                 {'blogURL': 'http://blog.zhangyangwei.com'}, 
+	                 function callback(response) {
+	                 	document.getElementById("dayText").innerHTML = response
+	                 }
+	})
+})
+
+
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
