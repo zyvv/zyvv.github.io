@@ -14,16 +14,14 @@ function setupWebViewJavascriptBridge(callback) {
     setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
 }
 
-setupWebViewJavascriptBridge(function(bridge) {
-    /* Initialize your app here */
-	bridge.callHandler('getBlogNameFromObjC', 
-	                 {'blogURL': 'http://blog.zhangyangwei.com'}, 
-	                 function callback(response) {
-	                 	// document.getElementById("dayText").innerHTML = response
-	                 }
+    setupWebViewJavascriptBridge(function(bridge) {
+		// iOS调用js方法 
+		bridge.registerHandler('testJavascriptHandler', function(data, responseCallback) {
+			document.getElementById("dayText").innerHTML = data
+			var responseData = { 'Javascript Says':'Right back atcha!' }
+			responseCallback(responseData)
+		})
 	})
-})
-
 
 var _hmt = _hmt || [];
 (function() {
