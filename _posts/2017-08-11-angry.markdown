@@ -1,5 +1,5 @@
 ---
-title: '查一'
+title: '生气'
 layout: post
 tags: 
     - 金庸

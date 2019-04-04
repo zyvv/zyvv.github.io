@@ -8,7 +8,7 @@ tags:
 ---
 
 
-![](http://7xpyhz.com1.z0.glb.clouddn.com/gakki.jpg)
+![](https://s2.ax1x.com/2019/04/04/AReAAI.jpg)
 
 
 <audio controls="controls">

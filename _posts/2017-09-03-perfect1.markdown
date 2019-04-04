@@ -81,7 +81,7 @@ print("Network error thrown: \(err) \(msg)")
 
 ```
 注意在运行之前，必须先将这个工程的`Working Diectory`设置正确。选中第二个Target，点击`Edit Scheme`，将`Working Diectory`栏设置为工程的根目录。
-![](http://7xpyhz.com1.z0.glb.clouddn.com/working_diectory.jpg)
+![](https://s2.ax1x.com/2019/04/04/AREfDs.jpg)
 
 最后编译并运行。
 
@@ -159,7 +159,7 @@ routes.add(method: .post, uri: "post", handler: {
 server.addRoutes(routes)
 ```
 使用[Rested](https://itunes.apple.com/cn/app/rested-simple-http-requests/id421879749?mt=12)进行POST请求：
-![](http://7xpyhz.com1.z0.glb.clouddn.com/rested_post.png)
+![](https://s2.ax1x.com/2019/04/04/AREWuj.jpg)
 如图，返回了正确的JSON数据。
 
 这就是Perfect的基本使用介绍，你可以在[这里](https://files.betamax.raywenderlich.com/attachments/videos/661/a8197c96-f551-4b14-a0e0-f7f712a82359.zip)下载Demo源码。
