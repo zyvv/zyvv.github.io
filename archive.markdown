@@ -9,7 +9,7 @@ layout: page
   {% if year != y %}
     {% assign year = y %}
     <span class="year-seperator">
-        <li class="fa fa-quote-left">{{ "  " + y }}</li>
+        <li class="fa fa-quote-left">"  " + {{ y }}</li>
     </span>
   {% endif %}
   <li class="listing-item">
