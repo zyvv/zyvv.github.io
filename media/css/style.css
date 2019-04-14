@@ -162,9 +162,9 @@ ul.listing {
     ul.listing li.listing-item:hover {
       background-color: #f9f9f9; }
     ul.listing li.year-seperator {
-      color: #ccc; }
-      ul.listing li.year-seperator artist-list {
-        padding-right: 5px; }
+      color: #ccc;
+      padding-right: 5px;
+      font-family: telexregular, Hiragino Sans GB, Microsoft YaHei, sans-serif; }
 
 article {
   margin: 2em 0; }
