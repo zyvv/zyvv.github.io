@@ -17,10 +17,6 @@
   margin: 0;
   padding: 0; }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    color: #999999;
-    background-color: #243447; } }
 body {
   font-size: 14px;
   font-family: telexregular, Hiragino Sans GB, Microsoft YaHei, sans-serif;
@@ -28,6 +24,10 @@ body {
   background-color: #f9f9f9;
   -webkit-font-smoothing: antialiased; }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #999999;
+    background-color: #243447; } }
 ol, ul {
   list-style-position: inside; }
 
