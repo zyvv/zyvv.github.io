@@ -8,9 +8,10 @@ layout: page
   {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
   {% if year != y %}
     {% assign year = y %}
-    <div class="year-seperator">
-     <span class="fa fa-quote-left"></span><li class="listing-seperator">{{ y }}</li>
-    </div>
+    <span class="year-seperator">
+     <span class="fa fa-quote-left"></span>
+     <span class="artist-list"> <li class="listing-seperator">{{ y }}</li></span>
+    </span>
   {% endif %}
   <li class="listing-item">
     <time datetime="{{ post.date | date:"%m-%d" }}">{{ post.date | date:"%m-%d" }}</time>

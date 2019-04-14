@@ -132,7 +132,13 @@ ul.listing {
     list-style-type:none;
     padding: 0;
     &.listing-item { a { padding: .2em 0 .2em 2em; } time { color: #999; } &:hover { background-color: $background-color; } }
-    &.year-seperator { color: $dark-title-barkground-color; listing-seperator { font-family: #{$label-font, float: left;} } }
+    &.year-seperator { 
+      color: $dark-title-barkground-color; 
+      artist-list {
+        padding-right: 5px;
+
+      }
+    }
   }
 }
 

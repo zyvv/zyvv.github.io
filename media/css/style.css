@@ -1,73 +1,308 @@
-/*
-Error: Invalid CSS after "...bel-font, float": expected "}", was ": left;} } }"
-        on line 135 of css/style.scss
+/*------------------------------------
+ * sext-vi
+ *
+ * @author linghua.zhang@me.com
+ * @link http://lhzhang.com/
+ * @update 2015-07-24
+ *
+ * |/ | (~ (~
+ * |\.|._)._)
+ * --------------------------------- */
+@import url(/media/fonts/telex-regular.css);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300);
+@import url(//code.cdn.mozilla.net/fonts/fira.css);
+@import url(/media/css/tomorrow.css);
+* {
+  margin: 0;
+  padding: 0; }
 
-130:   margin-top: 1em;
-131:   li {
-132:     list-style-type:none;
-133:     padding: 0;
-134:     &.listing-item { a { padding: .2em 0 .2em 2em; } time { color: #999; } &:hover { background-color: $background-color; } }
-135:     &.year-seperator { color: $dark-title-barkground-color; listing-seperator { font-family: #{$label-font, float: left;} } }
-136:   }
-137: }
-138: 
-139: article {
-140:   margin: 2em 0;
+body {
+  font-size: 14px;
+  font-family: telexregular, Hiragino Sans GB, Microsoft YaHei, sans-serif;
+  color: #555;
+  background-color: #f9f9f9;
+  -webkit-font-smoothing: antialiased; }
 
-Backtrace:
-css/style.scss:135
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/script/lexer.rb:240:in `expected!'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/script/parser.rb:862:in `assert_tok'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/script/parser.rb:427:in `interpolation'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/script/parser.rb:343:in `expr'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/script/parser.rb:853:in `assert_expr'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/script/parser.rb:68:in `parse'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1164:in `sass_script'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1002:in `value!'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:807:in `block in try_declaration'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1284:in `rethrow'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:820:in `try_declaration'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:743:in `declaration_or_ruleset'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:708:in `block_child'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:697:in `block_contents'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:689:in `block'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:758:in `declaration_or_ruleset'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:708:in `block_child'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:689:in `block'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:758:in `declaration_or_ruleset'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:708:in `block_child'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:689:in `block'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:758:in `declaration_or_ruleset'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:708:in `block_child'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:689:in `block'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:681:in `ruleset'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:707:in `block_child'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:137:in `stylesheet'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:41:in `parse'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/engine.rb:414:in `_to_tree'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:320:in `block in watch'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"...bel-font, float\": expected \"}\", was \": left;} } }\"\A         on line 135 of css/style.scss\A \A 130:   margin-top: 1em;\A 131:   li {\A 132:     list-style-type:none;\A 133:     padding: 0;\A 134:     &.listing-item { a { padding: .2em 0 .2em 2em; } time { color: #999; } &:hover { background-color: $background-color; } }\A 135:     &.year-seperator { color: $dark-title-barkground-color; listing-seperator { font-family: #{$label-font, float: left;} } }\A 136:   }\A 137: }\A 138: \A 139: article {\A 140:   margin: 2em 0;"; }
+ol, ul {
+  list-style-position: inside; }
+
+li {
+  padding: .2em 0; }
+
+hr {
+  width: 4em;
+  border: none;
+  border-top: 1px dashed #d0d0d0;
+  border-bottom: 1px dashed background-color; }
+
+.center {
+  text-align: center; }
+
+::selection {
+  color: #fff;
+  background-color: #333; }
+
+a, header #header h1 a, article .title a, article .meta .tags a, article .divider a {
+  text-decoration: none;
+  color: #bb2222; }
+  a:hover, header #header h1 a:hover, article .title a:hover, article .meta .tags a:hover, article .divider a:hover {
+    color: #dd1144; }
+
+blockquote {
+  background-color: #f8f8f8;
+  padding: 0 1em;
+  border-left: 3px solid #e0e0e0;
+  font-size: 13px;
+  font-family: Fira Mono, monospace;
+  line-height: 1.6;
+  display: block;
+  overflow: auto; }
+
+code {
+  padding: .4em;
+  padding-top: .2em;
+  padding-bottom: .1em;
+  background: #e8f2fb;
+  border: 1px solid #c9e1f6;
+  border-radius: 3px;
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  font-size: .9em;
+  vertical-align: middle;
+  word-wrap: break-word; }
+
+pre {
+  margin-bottom: 1.3em;
+  padding: 1em 2.5%;
+  background: #e8f2fb;
+  border: 1px solid #c9e1f6;
+  border-radius: 3px;
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  font-size: .9em;
+  font-weight: normal;
+  line-height: 1.3em;
+  overflow: scroll; }
+  pre code {
+    padding: .0em !important;
+    background-color: #e8f2fb !important;
+    background: #e8f2fb !important;
+    border: none; }
+
+h1, h2 {
+  font-size: 1.4em; }
+
+time {
+  font-family: Ubuntu, monospace; }
+
+header {
+  margin: 0 auto;
+  text-align: justify;
+  margin: 3em auto; }
+  @media screen and (min-width: 320px) {
+    header {
+      width: 300px; } }
+  @media screen and (min-width: 375px) {
+    header {
+      width: 350px; } }
+  @media screen and (min-width: 414px) {
+    header {
+      width: 400px; } }
+  @media screen and (min-width: 800px) {
+    header {
+      width: 750px; } }
+  header:after {
+    content: '';
+    width: 100%;
+    display: inline-block; }
+  header #header {
+    display: inline-block;
+    position: relative;
+    top: 1em; }
+    header #header h1 {
+      font-family: telexregular, Hiragino Sans GB, Microsoft YaHei, sans-serif; }
+      header #header h1 a {
+        color: #a9a9a9;
+        display: block; }
+  header nav {
+    display: inline-block;
+    position: relative;
+    top: 1em; }
+    header nav span {
+      margin: .5em; }
+    header nav a, header nav #header h1 a, header #header h1 nav a, header nav article .title a, article .title header nav a, header nav article .meta .tags a, article .meta .tags header nav a, header nav article .divider a, article .divider header nav a {
+      font-family: telexregular, Hiragino Sans GB, Microsoft YaHei, sans-serif;
+      color: #ccc; }
+
+#content {
+  margin: 0 auto;
+  line-height: 2em; }
+  @media screen and (min-width: 320px) {
+    #content {
+      width: 300px; } }
+  @media screen and (min-width: 375px) {
+    #content {
+      width: 350px; } }
+  @media screen and (min-width: 414px) {
+    #content {
+      width: 400px; } }
+  @media screen and (min-width: 800px) {
+    #content {
+      width: 750px; } }
+  #content .main-listing {
+    margin-bottom: 2em; }
+
+ul.listing {
+  margin-top: 1em; }
+  ul.listing li {
+    list-style-type: none;
+    padding: 0; }
+    ul.listing li.listing-item a, ul.listing li.listing-item header #header h1 a, header #header h1 ul.listing li.listing-item a {
+      padding: .2em 0 .2em 2em; }
+    ul.listing li.listing-item time {
+      color: #999; }
+    ul.listing li.listing-item:hover {
+      background-color: #f9f9f9; }
+    ul.listing li.year-seperator {
+      color: #ccc; }
+      ul.listing li.year-seperator artist-list {
+        padding-right: 5px; }
+
+article {
+  margin: 2em 0; }
+  article p {
+    padding: .7em 0; }
+  article .title {
+    font-family: telexregular, Hiragino Sans GB, Microsoft YaHei, sans-serif; }
+    article .title header #header h1 a, header #header h1 article .title a, article .title a, article .title .meta .tags a, article .meta .tags .title a {
+      color: #777; }
+  article .meta {
+    display: block;
+    overflow: auto;
+    margin-top: -.5em;
+    font-size: .9em; }
+    article .meta .tags header #header h1 a, header #header h1 article .meta .tags a, article .meta .tags a {
+      color: #999999;
+      padding: .25em; }
+  article .post img {
+    max-width: 100%;
+    display: block;
+    margin: .5em auto; }
+  article .comment {
+    margin: 3em 0; }
+  article .divider {
+    margin: 2em 0; }
+    article .divider i {
+      margin: 0 2em;
+      color: #e9e9e9; }
+    article .divider header #header h1 a, header #header h1 article .divider a, article .divider .meta .tags a, article .meta .tags .divider a, article .divider a {
+      font-family: telexregular, Hiragino Sans GB, Microsoft YaHei, sans-serif;
+      margin: 0 2em; }
+      article .divider header #header h1 a i, header #header h1 article .divider a i, article .divider .meta .tags a i, article .meta .tags .divider a i, article .divider a i {
+        color: #999999;
+        margin: 0; }
+        article .divider header #header h1 a i:hover, header #header h1 article .divider a i:hover, article .divider a i:hover {
+          color: #bb2222 !important; }
+  article .divider {
+    position: relative;
+    font-size: 1em;
+    z-index: 1;
+    overflow: hidden;
+    text-align: center; }
+  article .divider:before, article .divider:after {
+    position: absolute;
+    top: 51%;
+    overflow: hidden;
+    width: 49%;
+    height: 2px;
+    content: '\a0';
+    background-color: #f0f0f0; }
+  article .divider:before {
+    margin-left: -50%;
+    text-align: right; }
+  article .divider:after {
+    margin-left: 1%; }
+
+footer {
+  margin: 0 auto;
+  display: block;
+  color: #909090;
+  font-family: telexregular, Hiragino Sans GB, Microsoft YaHei, sans-serif;
+  font-size: .9em;
+  text-align: center;
+  margin: 1em auto; }
+  @media screen and (min-width: 320px) {
+    footer {
+      width: 300px; } }
+  @media screen and (min-width: 375px) {
+    footer {
+      width: 350px; } }
+  @media screen and (min-width: 414px) {
+    footer {
+      width: 400px; } }
+  @media screen and (min-width: 800px) {
+    footer {
+      width: 750px; } }
+  footer a, footer header #header h1 a, header #header h1 footer a, footer article .title a, article .title footer a, footer article .meta .tags a, article .meta .tags footer a, footer article .divider a, article .divider footer a {
+    color: #cccccc; }
+    footer a:hover, footer header #header h1 a:hover, header #header h1 footer a:hover, footer article .meta .tags a:hover, article .meta .tags footer a:hover {
+      color: #999999; }
+
+#tag_cloud {
+  margin-bottom: 1em; }
+
+.gist {
+  font-size: 13px;
+  line-height: 1.6; }
+
+/*.like-wrapper {
+  color: #999;
+  .like-button, .unlike-button { font-family: "FontAwesome"; padding-right: 5px; }
+  .like-button:hover { color: #dd1144; }
+  .like-button.liked:hover { color: #999; }
+}*/
+@media (prefers-color-scheme: dark) {
+  header #header h1 a {
+    color: #ccc; }
+
+  body {
+    color: #999999;
+    background-color: #222; }
+
+  blockquote {
+    background-color: #222;
+    border-left: 3px solid #999999; }
+
+  code {
+    background: #1d1d1d;
+    border: 1px solid #1d1d1d; }
+
+  pre {
+    background: #1d1d1d;
+    border: 1px solid #1d1d1d; }
+    pre code {
+      background-color: #1d1d1d !important;
+      background: #1d1d1d !important; }
+
+  article .title header #header h1 a, header #header h1 article .title a, article .title a, article .title .meta .tags a, article .meta .tags .title a {
+    color: #ccc; }
+  article .meta .tags header #header h1 a, header #header h1 article .meta .tags a, article .meta .tags a {
+    color: #999999; }
+  article .divider i {
+    color: #999999; }
+  article .divider header #header h1 a i, header #header h1 article .divider a i, article .divider .meta .tags a i, article .meta .tags .divider a i, article .divider a i {
+    color: #999999; }
+  article .divider:before, article .divider:after {
+    background-color: #999999; }
+
+  ul.listing li.listing-item:hover {
+    background-color: #222; }
+  ul.listing li.year-seperator {
+    color: #ccc; }
+
+  footer {
+    color: #999999; }
+    footer a, footer header #header h1 a, header #header h1 footer a, footer article .title a, article .title footer a, footer article .meta .tags a, article .meta .tags footer a, footer article .divider a, article .divider footer a {
+      color: #999999; }
+      footer a:hover, footer header #header h1 a:hover, header #header h1 footer a:hover, footer article .meta .tags a:hover, article .meta .tags footer a:hover {
+        color: #999999; } }
+
+/*# sourceMappingURL=style.css.map */
