@@ -78,7 +78,7 @@ pre {
   font-size: .9em;
   font-weight: normal;
   line-height: 1.3em;
-  overflow:scroll;
+  overflow:hidden;
   code {
   	padding: .0em !important;
     background-color: lighten(#5BA4E5, 32%) !important; 
@@ -132,7 +132,7 @@ ul.listing {
     list-style-type:none;
     padding: 0;
     &.listing-item { a { padding: .2em 0 .2em 2em; } time { color: #999; } &:hover { background-color: $background-color; } }
-    &.year-seperator { 
+    &.fa-li { 
       color: $dark-title-barkground-color; 
       padding-right: 5px;
       font-family: #{$label-font};
@@ -247,7 +247,7 @@ footer {
       i {color: $dark-color; }
       a { i { color: $dark-color } }
     }
-    .divider:before, .divider:after { background-color: $dark-color; }
+    .divider:before, .divider:after { background-color: #f1f1f1; }
   }
   ul.listing {
     li {
