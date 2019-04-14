@@ -132,7 +132,7 @@ ul.listing {
     list-style-type:none;
     padding: 0;
     &.listing-item { a { padding: .2em 0 .2em 2em; } time { color: #999; } &:hover { background-color: $background-color; } }
-    &.year-seperator { color: $dark-title-barkground-color; display: inline-block; listing-seperator { font-family: #{$label-font}; } }
+    &.year-seperator { color: $dark-title-barkground-color; listing-seperator { font-family: #{$label-font, float: left;} } }
   }
 }
 
