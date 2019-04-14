@@ -115,7 +115,7 @@ header {
     top: 1em;
     span { margin: .5em; }
     a {
-      font-family: #{$label-font}; color: dark-title-barkground-color;
+      font-family: #{$label-font}; color: $dark-title-barkground-color;
     }
   }
 }
@@ -131,8 +131,8 @@ ul.listing {
   li {
     list-style-type:none;
     padding: 0;
-    &.listing-item { a { padding: .2em 0 .2em 2em; } time { color: #999; } &:hover { background-color: background-color; } }
-    &.listing-seperator { font-family: #{$label-font}; &:before { font-family: "FontAwesome"; content: "&#xf10d;"; color: dark-title-barkground-color; } }
+    &.listing-item { a { padding: .2em 0 .2em 2em; } time { color: #999; } &:hover { background-color: $background-color; } }
+    &.listing-seperator { font-family: #{$label-font};/* &:before { font-family: "FontAwesome"; content: "&#xf10d;"; color: $dark-title-barkground-color; }*/ }
   }
 }
 
@@ -204,58 +204,54 @@ footer {
 .gist { font-size: 13px; line-height:1.6; }
 
 // like
-.like-wrapper {
+/*.like-wrapper {
   color: #999;
   .like-button, .unlike-button { font-family: "FontAwesome"; padding-right: 5px; }
   .like-button:hover { color: #dd1144; }
   .like-button.liked:hover { color: #999; }
-}
-
-
+}*/
 
 @media (prefers-color-scheme: dark) {
   header {
     #header {
       h1 {
         a {
-          color: dark-title-barkground-color;
+          color: $dark-title-barkground-color;
         }
       }
     }
   }
-
-  body { color: dark-color; background-color: dark-background-color; }
-  code { background: dark-code-barkground-color; border: 1px solid dark-code-barkground-color; }
+  body { color: $dark-color; background-color: $dark-background-color; }
+  code { background: $dark-code-barkground-color; border: 1px solid $dark-code-barkground-color; }
   pre {
-    background: dark-code-barkground-color;
-    border: 1px solid dark-code-barkground-color;
+    background: $dark-code-barkground-color;
+    border: 1px solid $dark-code-barkground-color;
     code {
-      background-color: dark-code-barkground-color !important; 
-      background: dark-code-barkground-color !important;
+      background-color: $dark-code-barkground-color !important; 
+      background: $dark-code-barkground-color !important;
     }
   }
   article {
     .title {
-      a { color: dark-title-barkground-color; }
+      a { color: $dark-title-barkground-color; }
     }
-
     .meta {
-      .tags a { color: dark-color; }
+      .tags a { color: $dark-color; }
     }
     .divider {
-      i {color: dark-color; }
-      a { i { color: dark-color } }
-    .divider:before, .divider:after { background-color: dark-color; }
+      i {color: $dark-color; }
+      a { i { color: $dark-color } }
+    .divider:before, .divider:after { background-color: $dark-color; }
     }
   }
   ul.listing {
     li {
-      &.listing-item { time { color: #999; } &:hover { background-color: dark-background-color; } }
-      &.listing-seperator { &:before { color: dark-title-barkground-color; } }
+      &.listing-item { time { color: #999; } &:hover { background-color: $dark-background-color; } }
+      &.listing-seperator { &:before { color: $dark-title-barkground-color; } }
     }
   }
   footer {
-    color: dark-color;
-    a { color: dark-color; &:hover { color: dark-color; }; }
+    color: $dark-color;
+    a { color: dark-color; &:hover { color: $dark-color; }; }
   }
 }
