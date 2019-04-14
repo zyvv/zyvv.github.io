@@ -291,7 +291,7 @@ footer {
   article .divider header #header h1 a i, header #header h1 article .divider a i, article .divider .meta .tags a i, article .meta .tags .divider a i, article .divider a i {
     color: #999999; }
   article .divider:before, article .divider:after {
-    background-color: #f1f1f1; }
+    background-color: rgba(228, 227, 255, 0.15); }
 
   ul.listing li.listing-item:hover {
     background-color: #222; }

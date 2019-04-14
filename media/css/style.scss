@@ -247,7 +247,7 @@ footer {
       i {color: $dark-color; }
       a { i { color: $dark-color } }
     }
-    .divider:before, .divider:after { background-color: #f1f1f1; }
+    .divider:before, .divider:after { background-color: rgba(228, 227, 255, 0.15); }
   }
   ul.listing {
     li {
