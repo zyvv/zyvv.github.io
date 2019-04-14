@@ -9,8 +9,7 @@ layout: page
   {% if year != y %}
     {% assign year = y %}
     <span class="year-seperator">
-     <span class="fa fa-quote-left"></span>
-     <span class="artist-list"> <li class="listing-seperator">{{ y }}</li></span>
+     <span class="artist-list"> <li class="fa fa-quote-left">{{ y }}</li></span>
     </span>
   {% endif %}
   <li class="listing-item">
