@@ -132,7 +132,7 @@ ul.listing {
     list-style-type:none;
     padding: 0;
     &.listing-item { a { padding: .2em 0 .2em 2em; } time { color: #999; } &:hover { background-color: $background-color; } }
-    &.listing-seperator { font-family: #{$label-font};/* &:before { font-family: "FontAwesome"; content: "&#xf10d;"; color: $dark-title-barkground-color; }*/ }
+    &.year-seperator { color: $dark-title-barkground-color; display: inline-block; listing-seperator { font-family: #{$label-font}; } }
   }
 }
 
@@ -222,6 +222,7 @@ footer {
     }
   }
   body { color: $dark-color; background-color: $dark-background-color; }
+  blockquote { background-color: $dark-background-color;  border-left: 3px solid $dark-color; }
   code { background: $dark-code-barkground-color; border: 1px solid $dark-code-barkground-color; }
   pre {
     background: $dark-code-barkground-color;
@@ -241,17 +242,17 @@ footer {
     .divider {
       i {color: $dark-color; }
       a { i { color: $dark-color } }
-    .divider:before, .divider:after { background-color: $dark-color; }
     }
+    .divider:before, .divider:after { background-color: $dark-color; }
   }
   ul.listing {
     li {
-      &.listing-item { time { color: #999; } &:hover { background-color: $dark-background-color; } }
-      &.listing-seperator { &:before { color: $dark-title-barkground-color; } }
+      &.listing-item { &:hover { background-color: $dark-background-color; } }
+      &.year-seperator { color: $dark-title-barkground-color; }
     }
   }
   footer {
     color: $dark-color;
-    a { color: dark-color; &:hover { color: $dark-color; }; }
+    a { color: $dark-color; &:hover { color: $dark-color; }; }
   }
 }
