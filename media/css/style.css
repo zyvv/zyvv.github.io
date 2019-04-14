@@ -17,6 +17,10 @@
   margin: 0;
   padding: 0; }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #ddd;
+    background-color: #222; } }
 body {
   font-size: 14px;
   font-family: telexregular, Hiragino Sans GB, Microsoft YaHei, sans-serif;
