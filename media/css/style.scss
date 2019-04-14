@@ -21,6 +21,10 @@ $monospace: "Fira Mono", monospace;
 $label-font: $font-name, "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
 $time-font: "Ubuntu", monospace;
 $background-color: #f9f9f9;
+$dark-background-color: #222;
+$dark-color: #999999;
+$dark-code-barkground-color: #1d1d1d;
+$dark-title-barkground-color: #ccc;
 
 @mixin page {
   margin: 0 auto;
@@ -32,12 +36,9 @@ $background-color: #f9f9f9;
 
 * { margin: 0; padding: 0; }
 body { font-size: 14px; font-family: #{$font}; color: #555; background-color: $background-color; -webkit-font-smoothing: antialiased; }
-@media (prefers-color-scheme: dark) {
-  body { color: #999999; background-color: #243447; }
-}
 ol, ul { list-style-position: inside; }
 li { padding: .2em 0; }
-hr { width: 4em; border: none; border-top: 1px dashed #d0d0d0; border-bottom: 1px dashed #f9f9f9; }
+hr { width: 4em; border: none; border-top: 1px dashed #d0d0d0; border-bottom: 1px dashed background-color; }
 .center { text-align: center; }
 ::selection { color: #fff; background-color: #333; }
 a { text-decoration: none; color: #bb2222; &:hover { color: #dd1144; }; }
@@ -114,7 +115,7 @@ header {
     top: 1em;
     span { margin: .5em; }
     a {
-      font-family: #{$label-font}; color: #ccc;
+      font-family: #{$label-font}; color: dark-title-barkground-color;
     }
   }
 }
@@ -130,8 +131,8 @@ ul.listing {
   li {
     list-style-type:none;
     padding: 0;
-    &.listing-item { a { padding: .2em 0 .2em 2em; } time { color: #999; } &:hover { background-color: #f9f9f9; } }
-    &.listing-seperator { font-family: #{$label-font}; &:before { content: "⭠ "; color: #ccc; } }
+    &.listing-item { a { padding: .2em 0 .2em 2em; } time { color: #999; } &:hover { background-color: background-color; } }
+    &.listing-seperator { font-family: #{$label-font}; &:before { font-family: "FontAwesome"; content: "&#xf10d;"; color: dark-title-barkground-color; } }
   }
 }
 
@@ -208,4 +209,53 @@ footer {
   .like-button, .unlike-button { font-family: "FontAwesome"; padding-right: 5px; }
   .like-button:hover { color: #dd1144; }
   .like-button.liked:hover { color: #999; }
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+  header {
+    #header {
+      h1 {
+        a {
+          color: dark-title-barkground-color;
+        }
+      }
+    }
+  }
+
+  body { color: dark-color; background-color: dark-background-color; }
+  code { background: dark-code-barkground-color; border: 1px solid dark-code-barkground-color; }
+  pre {
+    background: dark-code-barkground-color;
+    border: 1px solid dark-code-barkground-color;
+    code {
+      background-color: dark-code-barkground-color !important; 
+      background: dark-code-barkground-color !important;
+    }
+  }
+  article {
+    .title {
+      a { color: dark-title-barkground-color; }
+    }
+
+    .meta {
+      .tags a { color: dark-color; }
+    }
+    .divider {
+      i {color: dark-color; }
+      a { i { color: dark-color } }
+    .divider:before, .divider:after { background-color: dark-color; }
+    }
+  }
+  ul.listing {
+    li {
+      &.listing-item { time { color: #999; } &:hover { background-color: dark-background-color; } }
+      &.listing-seperator { &:before { color: dark-title-barkground-color; } }
+    }
+  }
+  footer {
+    color: dark-color;
+    a { color: dark-color; &:hover { color: dark-color; }; }
+  }
 }
