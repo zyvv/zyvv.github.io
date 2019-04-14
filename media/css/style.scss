@@ -10,7 +10,7 @@
  * --------------------------------- */
 
 @import url(/media/fonts/telex-regular.css);
-@import url(http://fonts.googleapis.com/css?family=Ubuntu:300);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300);
 @import url(//code.cdn.mozilla.net/fonts/fira.css);
 @import "media-queries";
 @import url(/media/css/tomorrow.css);
@@ -32,7 +32,7 @@ $background-color: #f9f9f9;
 
 * { margin: 0; padding: 0; }
 @media (prefers-color-scheme: dark) {
-  body { color: #ddd; background-color: #222; }
+  body { color: #999999; background-color: #243447; }
 }
 body { font-size: 14px; font-family: #{$font}; color: #555; background-color: $background-color; -webkit-font-smoothing: antialiased; }
 ol, ul { list-style-position: inside; }
