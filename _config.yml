@@ -4,9 +4,9 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 permalink: /:year/:title.html
-name: "vi~"
+name: "shall we talk"
 
-author: "vi~"
+author: "shall we talk"
 atom-baseurl: "https://zhangyangwei.com"
 #disqus: "gopherwood"
 
