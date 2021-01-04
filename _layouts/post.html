@@ -24,16 +24,15 @@ layout: default
   {% if page.title %}
   <div class="divider">
     <span>
-    {% if page.previous %}
-    <a href="{{ page.previous.url }}"><i class="fa fa-chevron-left"></i></a>
+    {% if page.next %}
+    <a href="{{ page.next.url }}"><i class="fa fa-chevron-right"></i></a>
     {% else %}
     <i class="fa fa-circle"></i>
     {% endif %}
     </span>
-
     <span>
-    {% if page.next %}
-    <a href="{{ page.next.url }}"><i class="fa fa-chevron-right"></i></a>
+    {% if page.previous %}
+    <a href="{{ page.previous.url }}"><i class="fa fa-chevron-left"></i></a>
     {% else %}
     <i class="fa fa-circle"></i>
     {% endif %}
