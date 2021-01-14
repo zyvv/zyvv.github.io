@@ -4,15 +4,13 @@ layout: post
 tags: 
 ---
 
-*2020年最佳歌曲：* [李志](https://open.spotify.com/artist/1fqb04dI9vaEcGDbIVrcib?si=rZzCXVOWQRqDrgKVi6L_1g) - [‎《热河》”](https://github.com/app-AZ/njlizhi/blob/master/1701/06%20-%20%E7%83%AD%E6%B2%B3.mp3)
 <iframe src="https://open.spotify.com/embed/track/5XaCwy5ZR6exjlVj23okKz" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+**2020年最佳歌曲：** [李志](https://open.spotify.com/artist/1fqb04dI9vaEcGDbIVrcib?si=rZzCXVOWQRqDrgKVi6L_1g) - [‎《热河》](https://github.com/app-AZ/njlizhi/blob/master/1701/06%20-%20%E7%83%AD%E6%B2%B3.mp3)
+---
+*往年回顾：*
 
-往年最佳：
+**2018年最佳歌手：** [王菲](https://music.apple.com/cn/artist/%E7%8E%8B%E8%8F%B2/41760704) / [窦唯](https://music.apple.com/cn/artist/%E7%AA%A6%E5%94%AF/368659167)
 
-*2018年最佳歌手：* [王菲](https://music.apple.com/cn/artist/%E7%8E%8B%E8%8F%B2/41760704) / [窦唯](https://music.apple.com/cn/artist/%E7%AA%A6%E5%94%AF/368659167)
-
-*2017年最佳歌曲：* [Harry Styles](https://music.apple.com/cn/artist/harry-styles/471260289) - [《Sign of the Times》](https://music.apple.com/cn/album/sign-of-the-times/1226034336?i=1226034393)
-<iframe allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="80" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/cn/album/sign-of-the-times/1226034336?i=1226034393"></iframe>
-
+**2017年最佳歌曲：** [Harry Styles](https://music.apple.com/cn/artist/harry-styles/471260289) - [《Sign of the Times》](https://music.apple.com/cn/album/sign-of-the-times/1226034336?i=1226034393)
 
 
