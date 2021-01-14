@@ -4,7 +4,7 @@ layout: post
 tags: 
 ---
 *2020年最佳歌曲：* 李志 - 《热河》
-<iframe src="https://open.spotify.com/embed/track/5XaCwy5ZR6exjlVj23okKz" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+<iframe src="https://open.spotify.com/embed/track/5XaCwy5ZR6exjlVj23okKz" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
 往年最佳：
 
