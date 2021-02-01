@@ -1,47 +1,5 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
-  <script>
-  var _hmt = _hmt || [];
-  (function() {
-	var hm = document.createElement("script");
-    hm.src = "https://hm.baidu.com/hm.js?f5a4e1722f1879eb989bcd7ae09e9160";
-    var s = document.getElementsByTagName("script")[0]; 
-    s.parentNode.insertBefore(hm, s);
-    
-    var now = new Date();
-
-  //   var date1 = new Date();
-  //   // date1.setFullYear(2017,5,16);
-  //   date1.setFullYear(2017,7-1,17);
-  //   var time1 = now.getTime() - date1.getTime();
-  //   var day1 = Math.abs(time1/(24*3600*1000));
-
-    var lastSawHerDate = new Date();
-    lastSawHerDate.setFullYear(2018,(5-1),8);
-    var lastSawHerTimeInterval = now.getTime() - lastSawHerDate.getTime();
-    var lastSawHerDays = Math.abs(lastSawHerTimeInterval/(24*3600*1000));
-
-    document.getElementById("lastSawHerDaysText").innerHTML = lastSawHerDays;
-    
-  })();
-  // window.onload = function() {
-  //   var now = new Date();
-
-  //   var date1 = new Date();
-  //   // date1.setFullYear(2017,5,16);
-  //   date1.setFullYear(2017,7-1,17);
-  //   var time1 = now.getTime() - date1.getTime();
-  //   var day1 = Math.abs(time1/(24*3600*1000));
-
-    // var date2 = new Date();
-    // date2.setFullYear(2018,5-1,8);
-    // var time2 = now.getTime() - date2.getTime();
-    // var day2 = Math.abs(time2/(24*3600*1000));
-
-    // document.getElementById("dayText").innerHTML = day1
-  // }
-  </script>
-
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="{{ site.author }}" />
@@ -65,6 +23,39 @@
 
       gtag('config', 'G-2FGWDK21KD');
     </script>
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+	var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?f5a4e1722f1879eb989bcd7ae09e9160";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+  window.onload = function() {
+  	var now = new Date();
+  	var lastSawHerDate = new Date();
+    lastSawHerDate.setFullYear(2018,(5-1),8);
+    var lastSawHerTimeInterval = now.getTime() - lastSawHerDate.getTime();
+    var lastSawHerDays = Math.abs(lastSawHerTimeInterval/(24*3600*1000));
+
+    document.getElementById("lastSawHerDaysText").innerHTML = lastSawHerDays;
+  //   var now = new Date();
+
+  //   var date1 = new Date();
+  //   // date1.setFullYear(2017,5,16);
+  //   date1.setFullYear(2017,7-1,17);
+  //   var time1 = now.getTime() - date1.getTime();
+  //   var day1 = Math.abs(time1/(24*3600*1000));
+
+    // var date2 = new Date();
+    // date2.setFullYear(2018,5-1,8);
+    // var time2 = now.getTime() - date2.getTime();
+    // var day2 = Math.abs(time2/(24*3600*1000));
+
+    // document.getElementById("dayText").innerHTML = day1
+  };
+  </script>
+
   </head>
   <body>
       <div id="main" role="main">
@@ -84,7 +75,7 @@
         <footer>
           <div>
             {% assign first_post = site.posts | last %}
-            &copy; {{ site.time | date: "%Y" }} {{ site.author }} <span>一万年太久，只争朝夕。</span> <span id="lastSawHerDaysText"></span>
+            &copy; {{ site.time | date: "%Y" }} <span>#一万年太久，只争朝夕</span> <span id="lastSawHerDaysText"></span>
           </div>
         </footer>
       </div> 
