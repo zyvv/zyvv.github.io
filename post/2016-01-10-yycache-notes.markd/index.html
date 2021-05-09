@@ -1,22 +1,105 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://zyvv.github.io/</id>
-    <title>Gridea</title>
-    <updated>2021-05-09T08:41:25.043Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://zyvv.github.io/"/>
-    <link rel="self" href="https://zyvv.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
-    <logo>https://zyvv.github.io/images/avatar.png</logo>
-    <icon>https://zyvv.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2021, Gridea</rights>
-    <entry>
-        <title type="html"><![CDATA[YYCache笔记]]></title>
-        <id>https://zyvv.github.io/post/2016-01-10-yycache-notes.markd/</id>
-        <link href="https://zyvv.github.io/post/2016-01-10-yycache-notes.markd/">
-        </link>
-        <updated>2021-05-09T08:39:55.000Z</updated>
-        <content type="html"><![CDATA[<p>上午去香山溜达了一圈，回来睡了一觉，直接就到5点了。好吧，我要开始写笔记了。。</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>YYCache笔记 | Gridea</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://zyvv.github.io//favicon.ico?v=1620549616642">
+<link rel="stylesheet" href="https://zyvv.github.io//styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="上午去香山溜达了一圈，回来睡了一觉，直接就到5点了。好吧，我要开始写笔记了。。
+源码地址：ibireme/YYCache
+YYMemoryCache
+
+支持同步和异步访问，但是并没有开放异步访问block回调的接口。
+支持在主线程进行释放，..." />
+    <meta name="keywords" content="iOS,笔记,源码" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://zyvv.github.io/">
+        <img src="https://zyvv.github.io//images/avatar.png?v=1620549616642" class="site-logo">
+        <h1 class="site-title">Gridea</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://zyvv.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">YYCache笔记</h2>
+            <div class="post-date">2021-05-09</div>
+            
+            <div class="post-content" v-pre>
+              <p>上午去香山溜达了一圈，回来睡了一觉，直接就到5点了。好吧，我要开始写笔记了。。</p>
 <p>源码地址：<a href="https://github.com/ibireme/YYCache">ibireme/YYCache</a></p>
 <h3 id="yymemorycache">YYMemoryCache</h3>
 <ul>
@@ -158,6 +241,53 @@ access to shared memory protected by the lock. Preemption is possible while the 
 <p>1月18号更新：<br>
 OSSpinLock已经不再安全，YY大神的这篇<a href="http://blog.ibireme.com/2016/01/16/spinlock_is_unsafe_in_ios/">博客文章</a>有详解。。</p>
 </blockquote>
-]]></content>
-    </entry>
-</feed>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://zyvv.github.io/tag/kemj1bNXN/" class="tag">
+                    iOS
+                  </a>
+                
+                  <a href="https://zyvv.github.io/tag/D0hnSeSkBi/" class="tag">
+                    笔记
+                  </a>
+                
+                  <a href="https://zyvv.github.io/tag/vEN8S5tEHW/" class="tag">
+                    源码
+                  </a>
+                
+              </div>
+            
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>
