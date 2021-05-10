@@ -13,7 +13,7 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:300);
 @import url(//code.cdn.mozilla.net/fonts/fira.css);
 @import "media-queries";
-@import url(/media/css/tomorrow.css);
+// @import url(/media/css/tomorrow.css);
 
 $font-name: "telexregular";
 $font: $font-name, "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
@@ -26,6 +26,139 @@ $dark-color: #999999;
 $dark-code-barkground-color: #1d1d1d;
 $dark-title-barkground-color: #ccc;
 
+$dt-gray-dark: #282a36; // Background
+$dt-gray-light: #f8f8f2; // Foreground
+$dt-yellow: #f1fa8c;
+$dt-gray: #44475a; // Current Line & Selection
+$dt-blue: #bfc6d8; // Comment
+$dt-cyan: #8be9fd;
+// $dt-green: #50fa7b;
+$dt-orange: #ff8000;
+$dt-pink: #ff79c6;
+$dt-purple: #bd93f9;
+$dt-red: #ff5555;
+
+
+pre.highlight {
+  background: $dt-gray-dark !important;
+  color: $dt-gray-light;
+  .hll,
+  .s,
+  .sa,
+  .sb,
+  .sc,
+  .dl,
+  .sd,
+  .s2,
+  .se,
+  .sh,
+  .si,
+  .sx,
+  .sr,
+  .s1,
+  .ss {
+      color: $dt-yellow;
+  }
+  .go {
+      color: $dt-gray;
+  }
+  .err,
+  .g,
+  .l,
+  .n,
+  .x,
+  .p,
+  .ge,
+  .gr,
+  .gh,
+  .gi,
+  .gp,
+  .gs,
+  .gu,
+  .gt,
+  .ld,
+  .no,
+  .nd,
+  .ni,
+  .ne,
+  .nn,
+  .nx,
+  .py,
+  .w,
+  .bp {
+      color: $dt-gray-light;
+  }
+  .gh,
+  .gi,
+  .gu {
+      font-weight: bold;
+  }
+  .ge {
+      text-decoration: underline;
+  }
+  .bp {
+      // font-style: italic;
+  }
+  .c,
+  .ch,
+  .cm,
+  .cpf,
+  .c1,
+  .cs {
+      color: $dt-blue;
+  }
+  .kd,
+  .kt,
+  .nb,
+  .nl,
+  .nv,
+  .vc,
+  .vg,
+  .vi,
+  .vm {
+      color: $dt-cyan;
+  }
+  // .kd,
+  // .nb,
+  // .nl,
+  // .nv,
+  // .vc,
+  // .vg,
+  // .vi,
+  // .vm {
+  //     font-style: italic;
+  // }
+  .na,
+  .nc,
+  .nf,
+  .fm {
+      color: $dt-orange;
+  }
+  .k,
+  .o,
+  .cp,
+  .kc,
+  .kn,
+  .kp,
+  .kr,
+  .nt,
+  .ow {
+      color: $dt-pink;
+  }
+  .m,
+  .mb,
+  .mf,
+  .mh,
+  .mi,
+  .mo,
+  .il {
+      color: $dt-purple;
+  }
+  .gd {
+      color: $dt-red;
+  }
+}
+
 @mixin page {
   margin: 0 auto;
   @include min-screen(320px) { width: 300px; }
@@ -34,26 +167,54 @@ $dark-title-barkground-color: #ccc;
   @include min-screen(800px) { width: 750px; }
 }
 
-* { margin: 0; padding: 0; }
-body { font-size: 14px; font-family: #{$font}; color: #555; background-color: $background-color; -webkit-font-smoothing: antialiased; }
-ol, ul { list-style-position: inside; }
-li { padding: .2em 0; }
-hr { width: 4em; border: none; border-top: 1px dashed #d0d0d0; border-bottom: 1px dashed background-color; }
-.center { text-align: center; }
-::selection { color: #fff; background-color: #333; }
-a { text-decoration: none; color: #bb2222; &:hover { color: #dd1144; }; }
+* { 
+  margin: 0; 
+  padding: 0;
+ }
+body { 
+  font-size: 14px; 
+  font-family: #{$font}; 
+  color: #555; 
+  background-color: $background-color; 
+  -webkit-font-smoothing: antialiased;
+ }
+ol, ul { 
+  list-style-position: inside;
+ }
+li {
+   padding: .2em 0;
+  }
+hr { 
+  width: 4em; 
+  order: none; 
+  border-top: 1px dashed #d0d0d0;
+  border-bottom: 1px dashed background-color;
+ }
+.center { 
+  text-align: center; 
+}
+::selection { 
+  color: #fff;
+  background-color: #333; 
+}
+a { 
+  text-decoration: none; 
+  color: #bb2222; 
+  &:hover { 
+    color: #dd1144; 
+  }; 
+}
 
 blockquote {
- background-color: #f8f8f8; 
- padding: 0 1em; 
- border-left: 3px solid #e0e0e0; 
- font-size: 13px; 
- font-family: #{$monospace};
- line-height: 1.6; 
- display: block; 
- overflow: auto; }
-
-
+  background-color: #f8f8f8; 
+  padding: 0 1em; 
+  border-left: 3px solid #e0e0e0; 
+  font-size: 13px; 
+  font-family: #{$monospace};
+  line-height: 1.6; 
+  display: block; 
+  overflow: auto;
+ }
 
 code {
   padding: .4em;
@@ -87,9 +248,12 @@ pre {
   }
 }
 
-
-h1, h2 { font-size: 1.4em; }
-time { font-family: #{$time-font} }
+h1, h2 { 
+  font-size: 1.4em;
+ }
+time { 
+  font-family: #{$time-font} 
+}
 
 header {
   @include page;
@@ -206,14 +370,6 @@ footer {
 
 // gist
 .gist { font-size: 13px; line-height:1.6; }
-
-// like
-/*.like-wrapper {
-  color: #999;
-  .like-button, .unlike-button { font-family: "FontAwesome"; padding-right: 5px; }
-  .like-button:hover { color: #dd1144; }
-  .like-button.liked:hover { color: #999; }
-}*/
 
 @media (prefers-color-scheme: dark) {
   header {

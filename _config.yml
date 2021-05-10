@@ -5,11 +5,7 @@ kramdown:
   syntax_highlighter: rouge
 permalink: /:year/:title.html
 name: "shall we talk"
-
 author: "shall we talk"
-atom-baseurl: "https://zhangyangwei.com"
-#disqus: "gopherwood"
-
 navigations:
   - title: Archive
     class: fa fa-list-ul
@@ -17,9 +13,6 @@ navigations:
   - title: Tags
     class: fa fa-tags
     href: /tags.html
-  # - title: Books
-  #   class: fa fa-book
-    # href: /about.html
   - title: About
     class: fa fa-user
     href: /about.html
