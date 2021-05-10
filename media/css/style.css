@@ -12,120 +12,294 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:300);
 @import url(//code.cdn.mozilla.net/fonts/fira.css);
 pre.highlight {
-  color: #f8f8f2;
+  background: var(--secondary-background);
+  border: 1px var(--separator-opaque) solid;
+  border-radius: 4px;
+  overflow: auto;
+  padding: 0.5em 1em;
+  margin-bottom: 1em;
 }
 
-pre.highlight .hll,
-pre.highlight .s,
-pre.highlight .sa,
-pre.highlight .sb,
-pre.highlight .sc,
-pre.highlight .dl,
-pre.highlight .sd,
-pre.highlight .s2,
-pre.highlight .se,
-pre.highlight .sh,
-pre.highlight .si,
-pre.highlight .sx,
-pre.highlight .sr,
-pre.highlight .s1,
-pre.highlight .ss {
-  color: #f1fa8c;
+pre.highlight code {
+  color: var(--text);
+  background: transparent !important;
 }
 
-pre.highlight .go {
-  color: #44475a;
+pre.highlight[data-lang="JWT"] {
+  white-space: pre-wrap;
 }
 
-pre.highlight .err,
-pre.highlight .g,
-pre.highlight .l,
-pre.highlight .n,
-pre.highlight .x,
-pre.highlight .p,
-pre.highlight .ge,
-pre.highlight .gr,
-pre.highlight .gh,
-pre.highlight .gi,
-pre.highlight .gp,
-pre.highlight .gs,
-pre.highlight .gu,
-pre.highlight .gt,
-pre.highlight .ld,
-pre.highlight .no,
-pre.highlight .nd,
-pre.highlight .ni,
-pre.highlight .ne,
-pre.highlight .nn,
-pre.highlight .nx,
-pre.highlight .py,
-pre.highlight .w,
-pre.highlight .bp {
-  color: #f8f8f2;
+.highlight .placeholder {
+  color: var(--text);
 }
 
-pre.highlight .gh,
-pre.highlight .gi,
-pre.highlight .gu {
-  font-weight: bold;
+.highlight .o {
+  color: var(--text);
 }
 
-pre.highlight .ge {
-  text-decoration: underline;
+.highlight .p {
+  color: var(--gray);
 }
 
-pre.highlight .c,
-pre.highlight .ch,
-pre.highlight .cm,
-pre.highlight .cpf,
-pre.highlight .c1,
-pre.highlight .cs {
-  color: #bfc6d8;
+.highlight .err {
+  color: var(--gray);
 }
 
-pre.highlight .kd,
-pre.highlight .kt,
-pre.highlight .nb,
-pre.highlight .nl,
-pre.highlight .nv,
-pre.highlight .vc,
-pre.highlight .vg,
-pre.highlight .vi,
-pre.highlight .vm {
-  color: #8be9fd;
+.highlight .s,
+.highlight .sa,
+.highlight .sb,
+.highlight .sc,
+.highlight .dl,
+.highlight .sd,
+.highlight .s2,
+.highlight .sh,
+.highlight .sx,
+.highlight .sr,
+.highlight .s1,
+.highlight .ss {
+  color: var(--orange);
 }
 
-pre.highlight .na,
-pre.highlight .nc,
-pre.highlight .nf,
-pre.highlight .fm {
-  color: #ff8000;
+.highlight .se,
+.highlight .si {
+  color: var(--text);
 }
 
-pre.highlight .k,
-pre.highlight .o,
-pre.highlight .cp,
-pre.highlight .kc,
-pre.highlight .kn,
-pre.highlight .kp,
-pre.highlight .kr,
-pre.highlight .nt,
-pre.highlight .ow {
-  color: #ff79c6;
+.highlight .k,
+.highlight .kc,
+.highlight .kd,
+.highlight .kn,
+.highlight .kp,
+.highlight .kr {
+  color: var(--purple);
 }
 
-pre.highlight .m,
-pre.highlight .mb,
-pre.highlight .mf,
-pre.highlight .mh,
-pre.highlight .mi,
-pre.highlight .mo,
-pre.highlight .il {
-  color: #bd93f9;
+.highlight .kt {
+  color: var(--text);
 }
 
-pre.highlight .gd {
-  color: #ff5555;
+.highlight .kd + .kt {
+  color: var(--text);
+}
+
+.highlight .go,
+.highlight .nc,
+.highlight .nf,
+.highlight .nv {
+  color: var(--text);
+}
+
+.highlight .kt + .o + .n,
+.highlight .nf {
+  color: var(--indigo);
+}
+
+.highlight .cp,
+.highlight .c1 {
+  color: var(--gray);
+}
+
+.highlight .n,
+.highlight .na,
+.highlight .nb,
+.highlight .bp,
+.highlight .no,
+.highlight .nd,
+.highlight .ni,
+.highlight .py,
+.highlight .nl,
+.highlight .nn,
+.highlight .nx,
+.highlight .nt,
+.highlight .vc,
+.highlight .vg,
+.highlight .vi {
+  color: var(--text);
+}
+
+.highlight .l,
+.highlight .ld,
+.highlight .s,
+.highlight .sb,
+.highlight .sc,
+.highlight .sd,
+.highlight .s2,
+.highlight .se,
+.highlight .sh,
+.highlight .si,
+.highlight .sx,
+.highlight .sr,
+.highlight .s1,
+.highlight .ss,
+.highlight .m,
+.highlight .mf,
+.highlight .mh,
+.highlight .mi,
+.highlight .il,
+.highlight .mo,
+.highlight .mx,
+.highlight .mb {
+  color: var(--indigo);
+}
+
+@media (prefers-color-scheme: dark) {
+  .highlight .p {
+    color: var(--gray2);
+  }
+  .highlight .err {
+    color: var(--gray);
+  }
+  .highlight .s,
+  .highlight .sa,
+  .highlight .sb,
+  .highlight .sc,
+  .highlight .dl,
+  .highlight .sd,
+  .highlight .s2,
+  .highlight .sh,
+  .highlight .sx,
+  .highlight .sr,
+  .highlight .s1,
+  .highlight .ss {
+    color: var(--green);
+  }
+  .highlight .se,
+  .highlight .si {
+    color: var(--text);
+  }
+  .highlight .k,
+  .highlight .kc,
+  .highlight .kd,
+  .highlight .kn,
+  .highlight .kp,
+  .highlight .kr {
+    color: var(--teal);
+  }
+  .highlight .kt {
+    color: var(--yellow);
+  }
+  .highlight .kd + .kt {
+    color: var(--orange);
+  }
+  .highlight .go,
+  .highlight .nc,
+  .highlight .nf,
+  .highlight .nv {
+    color: var(--text);
+  }
+  .highlight .kt + .o + .n,
+  .highlight .nf {
+    color: var(--purple);
+  }
+  .highlight .cp {
+    color: var(--red);
+  }
+  .highlight .c1 {
+    color: var(--gray2);
+  }
+  .highlight .n + .o + .n,
+  .highlight .na,
+  .highlight .nb,
+  .highlight .bp,
+  .highlight .no,
+  .highlight .nd,
+  .highlight .ni,
+  .highlight .py,
+  .highlight .nl,
+  .highlight .nn,
+  .highlight .nx,
+  .highlight .nt,
+  .highlight .vc,
+  .highlight .vg,
+  .highlight .vi {
+    color: var(--pink);
+  }
+  .highlight .l,
+  .highlight .ld,
+  .highlight .s,
+  .highlight .sb,
+  .highlight .sc,
+  .highlight .sd,
+  .highlight .s2,
+  .highlight .se,
+  .highlight .sh,
+  .highlight .si,
+  .highlight .sx,
+  .highlight .sr,
+  .highlight .s1,
+  .highlight .ss,
+  .highlight .m,
+  .highlight .mf,
+  .highlight .mh,
+  .highlight .mi,
+  .highlight .il,
+  .highlight .mo,
+  .highlight .mx,
+  .highlight .mb {
+    color: var(--orange);
+  }
+}
+
+:root {
+  --red: rgb(255, 59, 48);
+  --orange: rgb(255, 128, 0);
+  --yellow: rgb(255, 204, 0);
+  --green: rgb(52, 199, 89);
+  --teal: rgb(90, 200, 250);
+  --blue: rgb(0, 122, 255);
+  --indigo: rgb(88, 86, 214);
+  --purple: rgb(175, 82, 222);
+  --pink: rgb(255, 45, 85);
+  --gray: rgb(142, 142, 147);
+  --gray2: rgb(174, 174, 178);
+  --gray3: rgb(199, 199, 204);
+  --gray4: rgb(209, 209, 214);
+  --gray5: rgb(229, 229, 234);
+  --gray6: rgb(242, 242, 247);
+  --text: rgb(0, 0, 0);
+  --secondary-text: rgb(60, 60, 67);
+  --placeholder-text: rgb(60, 60, 67);
+  --code: var(--purple);
+  --link: var(--orange);
+  --separator: rgb(60, 60, 67);
+  --opaque-separator: rgb(198, 198, 200);
+  --fill: rgb(120, 120, 128);
+  --secondary-fill: rgb(120, 120, 128);
+  --background: rgb(242, 242, 247);
+  --secondary-background: rgb(255, 255, 255);
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  * {
+    -webkit-transition: none !important;
+    transition: none !important;
+  }
+  :root {
+    --red: color(display-p3 1 0.2314 0.1882);
+    --orange: color(display-p3 1 0.5 0);
+    --yellow: color(display-p3 1 0.8 0);
+    --green: color(display-p3 0.2039 0.7804 0.349);
+    --teal: color(display-p3 0.3529 0.7843 0.9804);
+    --blue: color(display-p3 0 0.4784 1);
+    --indigo: color(display-p3 0.3451 0.3373 0.8392);
+    --purple: color(display-p3 0.6863 0.3216 0.8706);
+    --pink: color(display-p3 1 0.1765 0.3333);
+    --gray: color(display-p3 0.5569 0.5569 0.5765);
+    --gray2: color(display-p3 0.6824 0.6824 0.698);
+    --gray3: color(display-p3 0.7804 0.7804 0.8);
+    --gray4: color(display-p3 0.8196 0.8196 0.8392);
+    --gray5: color(display-p3 0.898 0.898 0.9176);
+    --gray6: color(display-p3 0.949 0.949 0.9686);
+    --text: color(display-p3 0 0 0);
+    --secondary-text: color(display-p3 0.2353 0.2353 0.2627);
+    --placeholder-text: color(display-p3 0.2353 0.2353 0.2627);
+    --separator: color(display-p3 0.2353 0.2353 0.2627);
+    --opaque-separator: color(display-p3 0.7765 0.7765 0.7843);
+    --fill: color(display-p3 0.4706 0.4706 0.502);
+    --secondary-fill: color(display-p3 0.4706 0.4706 0.502);
+    --background: color(display-p3 0.949 0.949 0.9686);
+    --secondary-background: color(display-p3 1 1 1);
+  }
 }
 
 * {

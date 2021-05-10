@@ -13,6 +13,8 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:300);
 @import url(//code.cdn.mozilla.net/fonts/fira.css);
 @import "media-queries";
+@import "code";
+@import "colors";
 // @import url(/media/css/tomorrow.css);
 
 $font-name: "telexregular";
@@ -25,139 +27,6 @@ $dark-background-color: #222;
 $dark-color: #999999;
 $dark-code-barkground-color: #1d1d1d;
 $dark-title-barkground-color: #ccc;
-
-$dt-gray-dark: #282a36; // Background
-$dt-gray-light: #f8f8f2; // Foreground
-$dt-yellow: #f1fa8c;
-$dt-gray: #44475a; // Current Line & Selection
-$dt-blue: #bfc6d8; // Comment
-$dt-cyan: #8be9fd;
-// $dt-green: #50fa7b;
-$dt-orange: #ff8000;
-$dt-pink: #ff79c6;
-$dt-purple: #bd93f9;
-$dt-red: #ff5555;
-
-
-pre.highlight {
-  // background: $dt-gray-dark !important;
-  color: $dt-gray-light;
-  .hll,
-  .s,
-  .sa,
-  .sb,
-  .sc,
-  .dl,
-  .sd,
-  .s2,
-  .se,
-  .sh,
-  .si,
-  .sx,
-  .sr,
-  .s1,
-  .ss {
-      color: $dt-yellow;
-  }
-  .go {
-      color: $dt-gray;
-  }
-  .err,
-  .g,
-  .l,
-  .n,
-  .x,
-  .p,
-  .ge,
-  .gr,
-  .gh,
-  .gi,
-  .gp,
-  .gs,
-  .gu,
-  .gt,
-  .ld,
-  .no,
-  .nd,
-  .ni,
-  .ne,
-  .nn,
-  .nx,
-  .py,
-  .w,
-  .bp {
-      color: $dt-gray-light;
-  }
-  .gh,
-  .gi,
-  .gu {
-      font-weight: bold;
-  }
-  .ge {
-      text-decoration: underline;
-  }
-  .bp {
-      // font-style: italic;
-  }
-  .c,
-  .ch,
-  .cm,
-  .cpf,
-  .c1,
-  .cs {
-      color: $dt-blue;
-  }
-  .kd,
-  .kt,
-  .nb,
-  .nl,
-  .nv,
-  .vc,
-  .vg,
-  .vi,
-  .vm {
-      color: $dt-cyan;
-  }
-  // .kd,
-  // .nb,
-  // .nl,
-  // .nv,
-  // .vc,
-  // .vg,
-  // .vi,
-  // .vm {
-  //     font-style: italic;
-  // }
-  .na,
-  .nc,
-  .nf,
-  .fm {
-      color: $dt-orange;
-  }
-  .k,
-  .o,
-  .cp,
-  .kc,
-  .kn,
-  .kp,
-  .kr,
-  .nt,
-  .ow {
-      color: $dt-pink;
-  }
-  .m,
-  .mb,
-  .mf,
-  .mh,
-  .mi,
-  .mo,
-  .il {
-      color: $dt-purple;
-  }
-  .gd {
-      color: $dt-red;
-  }
-}
 
 @mixin page {
   margin: 0 auto;
