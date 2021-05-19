@@ -268,6 +268,34 @@ pre.highlight[data-lang="JWT"] {
   --secondary-background: #1d1d1d;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --red: rgb(255, 69, 58);
+    --yellow: rgb(255, 214, 10);
+    --green: rgb(48, 209, 88);
+    --teal: rgb(100, 210, 255);
+    --blue: rgb(10, 132, 255);
+    --indigo: rgb(94, 92, 230);
+    --purple: rgb(191, 90, 242);
+    --pink: rgb(255, 55, 95);
+    --gray: rgb(142, 142, 147);
+    --gray2: rgb(99, 99, 102);
+    --gray3: rgb(72, 72, 74);
+    --gray4: rgb(58, 58, 60);
+    --gray5: rgb(44, 44, 46);
+    --gray6: rgb(28, 28, 30);
+    --text: rgb(255, 255, 255);
+    --secondary-text: rgb(235, 235, 245);
+    --placeholder-text: rgb(235, 235, 245);
+    --separator: rgb(84, 84, 88);
+    --opaque-separator: rgb(56, 56, 58);
+    --fill: rgb(120, 120, 128);
+    --secondary-fill: rgb(120, 120, 128);
+    --background: rgb(14, 14, 15);
+    --secondary-background: rgb(28, 28, 30);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
