@@ -12,7 +12,6 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:300);
 @import url(//code.cdn.mozilla.net/fonts/fira.css);
 pre.highlight {
-  background: var(--secondary-background);
   border: 1px var(--separator-opaque) solid;
   border-radius: 4px;
   overflow: auto;
