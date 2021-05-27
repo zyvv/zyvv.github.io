@@ -5,7 +5,7 @@ kramdown:
   syntax_highlighter: rouge
 permalink: /:year/:title.html
 name: "shall we talk"
-author: "shall we talk"
+author: "zyvv"
 navigations:
   - title: Archive
     class: fa fa-list-ul
