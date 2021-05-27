@@ -58,7 +58,10 @@
         <footer>
           <div>
             {% assign first_post = site.posts | last %}
-            &copy; {{ site.time | date: "%Y" }}<a href="https://github.com/zyvv">{{ site.author }}</a>&nbsp;<span>#一万年太久，只争朝夕</span><span id="lastSawHerDays"></span>
+            &copy; {{ site.time | date: "%Y" }}
+            <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>.
+            <span>#一万年太久，只争朝夕</span>
+            <span id="lastSawHerDays"></span>
           </div>
         </footer>
       </div> 

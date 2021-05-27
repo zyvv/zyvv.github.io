@@ -6,6 +6,11 @@ kramdown:
 permalink: /:year/:title.html
 name: "shall we talk"
 author: "zyvv"
+social:
+  name: zyvv
+  links:
+    - https://github.com/zyvv
+
 navigations:
   - title: Archive
     class: fa fa-list-ul
